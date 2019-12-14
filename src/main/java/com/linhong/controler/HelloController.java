@@ -1,14 +1,25 @@
 package com.linhong.controler;
 
 import com.google.common.collect.Lists;
+import com.linhong.common.CommonResult;
+import com.linhong.mbg.model.PmsBrand;
+import com.linhong.service.PmsBrandService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @RestController
 public class HelloController {
+
+    @Autowired
+    private PmsBrandService demoService;
 
     @GetMapping("/hello")
     public String hello(){
