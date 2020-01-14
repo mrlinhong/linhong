@@ -25,6 +25,12 @@ spring:
         min-idle: 0 # 连接池中的最小空闲连接
     timeout: 3000ms # 连接超时时间（毫秒）
 
+    data:
+      mongodb:
+        host: localhost # mongodb的连接地址
+        port: 27017 # mongodb的连接端口号
+        database: mmall # mongodb的连接的数据库
+
 # 自定义redis key
 redis:
   key:
