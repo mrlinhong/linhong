@@ -23,4 +23,9 @@ public interface MemberReadHistoryService {
      * 获取用户浏览历史记录
      */
     List<MemberReadHistory> list(Long memberId);
+
+    /**
+     * 查询所有
+     */
+    List<MemberReadHistory> listAll();
 }

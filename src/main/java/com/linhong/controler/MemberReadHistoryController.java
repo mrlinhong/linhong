@@ -51,4 +51,11 @@ public class MemberReadHistoryController {
         List<MemberReadHistory> memberReadHistoryList = memberReadHistoryService.list(memberId);
         return CommonResult.success(memberReadHistoryList);
     }
+
+    @RequestMapping(value = "/listAll", method = RequestMethod.GET)
+    @ResponseBody
+    public CommonResult<List<MemberReadHistory>> listAll() {
+        List<MemberReadHistory> memberReadHistoryList = memberReadHistoryService.listAll();
+        return CommonResult.success(memberReadHistoryList);
+    }
 }
