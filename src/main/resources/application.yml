@@ -11,6 +11,14 @@ spring:
     url: jdbc:mysql://localhost:3306/mmall?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 1a2b3c4d
+  # rabbitmq配置
+  rabbitmq:
+    host: 111.229.14.172 # rabbitmq的连接地址
+    port: 5672 # rabbitmq的连接端口号
+    virtual-host: / # rabbitmq的虚拟host
+    username: guest # rabbitmq的用户名
+    password: guest # rabbitmq的密码
+    publisher-confirms: true #如果对异步消息需要回调必须设置为true
   # redis配置
   redis:
     host: localhost # Redis服务器地址
