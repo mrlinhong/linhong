@@ -10,5 +10,7 @@ public class Test {
 
         promotionActivity618.executePromotionStrategy();
         promotionActivity1111.executePromotionStrategy();
+
+        // 大量if else优化的话，可以把这些策略放在map工厂中，再根据路由健去获取即可
     }
 }
