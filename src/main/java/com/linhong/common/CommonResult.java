@@ -1,5 +1,7 @@
 package com.linhong.common;
 
+import com.linhong.exception.CommonServiceException;
+
 /**
  * 通用返回对象
  * Created by macro on 2019/4/19.
@@ -87,6 +89,14 @@ public class CommonResult<T> {
      */
     public static <T> CommonResult<T> forbidden(T data) {
         return new CommonResult<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
+    }
+
+    // 出现业务异常
+    public static<M> CommonResult serviceException(CommonServiceException e){
+        CommonResult response = new CommonResult();
+        response.setCode(e.getCode());
+        response.setMessage(e.getMessage());
+        return response;
     }
 
     public long getCode() {
