@@ -1,6 +1,6 @@
 # 项目及端口配置
 server:
-  port: 8080
+  port: 6666
   servlet:
     context-path: /linhong
 
@@ -19,6 +19,24 @@ spring:
     username: guest # rabbitmq的用户名
     password: guest # rabbitmq的密码
     publisher-confirms: true #如果对异步消息需要回调必须设置为true
+
+  # activemq配置
+  activemq:
+    #ActiveMQ通讯地址
+    broker-url: tcp://111.229.14.172:61617
+    #用户名
+    user: admin
+    #密码
+    password: admin
+    #是否启用内存模式（就是不安装MQ，项目启动时同时启动一个MQ实例）
+    in-memory: false
+    packages:
+      #信任所有的包
+      trust-all: true
+    pool:
+      #是否替换默认的连接池，使用ActiveMQ的连接池需引入的依赖
+      enabled: false
+
   # redis配置
   redis:
     host: localhost # Redis服务器地址
